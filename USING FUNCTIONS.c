@@ -1,18 +1,19 @@
 #include <stdio.h>
 
-// NO 12
+// NO 13
 
-
-float calculate_tax_amount(float price, float tax_rate) {
-    return price * (tax_rate );
+float calculatetotalsalary (float basesalary, float bonus){
+return basesalary + (basesalary * bonus);
 }
+ int main() {
 
-int main() {
-    float price = 50;
-    float tax_rate = 0.1;
-    float tax_amount = calculate_tax_amount(price, tax_rate);
+     float basesalary = 100000;
+     float bonus = 0.08;
+     float totalsalary = calculatetotalsalary (basesalary, bonus);
 
-    printf("Tax Amount: %.2f", tax_amount);
+     printf("Total salary;UGX %0.2f",totalsalary);
+
+
 
     return 0;
 }
