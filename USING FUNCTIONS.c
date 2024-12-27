@@ -1,20 +1,19 @@
 #include <stdio.h>
 
-// NO 8
+// NO 9
 
-void calculate_flat_interest(float investment_amount, float time, float rate, float *flat_interest) {
-    *flat_interest = investment_amount * time * rate;
+void calculate_profit_margin(float sales_revenue, float profit, float *profit_margin) {
+    *profit_margin = (profit / sales_revenue) * 100;
 }
 
 int main() {
-    float investment_amount = 1000000;
-    float time = 2;
-    float rate = 0.04;
-    float flat_interest;
+    float sales_revenue = 30000000;
+    float profit = 9000000;
+    float profit_margin;
 
-    calculate_flat_interest(investment_amount, time, rate, &flat_interest);
+    calculate_profit_margin(sales_revenue, profit, &profit_margin);
 
-    printf("Flat Interest: UGX %.2f\n", flat_interest);
+    printf("Profit Margin: %.2f percent", profit_margin);
 
     return 0;
 }
