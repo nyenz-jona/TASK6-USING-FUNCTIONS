@@ -1,21 +1,16 @@
 #include <stdio.h>
 
-// NO 17
-
-float calculatetotalexpenses(int numitems, float *prices) {
-    float totalexpenses = 0;
-    for (int i = 0; i < numitems; i++) {
-        totalexpenses += prices[i];
-    }
-    return totalexpenses;
+// NO 19
+float calculatetotaloverduefee (int days, float dailyoverdue){
+return dailyoverdue * days;
 }
 
-int main() {
-    int numitems = 4;
-    float prices[] = {100, 50, 150, 500};
-    float totalexpenses = calculatetotalexpenses(numitems, prices);
+int main(){
+int days = 6;
+float dailyoverdue = 100;
 
-    printf("Total Expenses: %.2f\n", totalexpenses);
+float totaloverdue = calculatetotaloverduefee(days, dailyoverdue);
 
+printf ("Total daily over due fees; %0.2f",totaloverdue);
     return 0;
 }
