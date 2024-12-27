@@ -1,21 +1,20 @@
 #include <stdio.h>
 
-// NO 7
-#include <stdio.h>
+// NO 8
 
-void calculatebreakevenpoint(double fixedcosts, double variablecostsperunit, double sellingpriceperunit, double *breakevenpoint) {
-    *breakevenpoint = fixedcosts / (sellingpriceperunit - variablecostsperunit);
+void calculate_flat_interest(float investment_amount, float time, float rate, float *flat_interest) {
+    *flat_interest = investment_amount * time * rate;
 }
 
 int main() {
-    double fixedcosts = 10000000;
-    double variablecostsperunit = 50000;
-    double sellingpriceperunit = 100000;
-    double breakevenpoint;
+    float investment_amount = 1000000;
+    float time = 2;
+    float rate = 0.04;
+    float flat_interest;
 
-    calculatebreakevenpoint(fixedcosts, variablecostsperunit, sellingpriceperunit, &breakevenpoint);
+    calculate_flat_interest(investment_amount, time, rate, &flat_interest);
 
-    printf("Break-even Point: %.2f units\n", breakevenpoint);
+    printf("Flat Interest: UGX %.2f\n", flat_interest);
 
     return 0;
 }
