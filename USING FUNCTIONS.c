@@ -1,20 +1,18 @@
 #include <stdio.h>
 
-// NO 15
+// NO 16
 
- float calculatediscountprice (float originalprice, float discount){
- return originalprice - (originalprice * discount );
- }
+ int calculateyears(float initialinvestment, float rate) {
+    return (int)ceil(log(2) / log(1 + (rate)));
+}
 
- int main(){
+int main() {
+    float initialinvestment = 1000;
+    float rate = 0.07;
+    int years= calculateyears(initialinvestment, rate);
 
-  float originalprice = 100000;
-  float discount = 0.08;
-  float discountprice = calculatediscountprice (originalprice, discount);
+    printf("Years to Double: %d years\n", years);
 
- if (discount>0.2) {
-    printf("Discount price; %.2f",discountprice);
-
- }
     return 0;
+
 }
