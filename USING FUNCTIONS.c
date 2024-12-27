@@ -1,18 +1,18 @@
 #include <stdio.h>
 
-// NO 11
+// NO 12
 
-float calculate_discounted_price(float price, float discount_percentage) {
-    float discount_amount = price * discount_percentage;
-    return price - discount_amount;
+
+float calculate_tax_amount(float price, float tax_rate) {
+    return price * (tax_rate );
 }
 
 int main() {
-    float price = 100;
-    float discount_percentage = 0.1;
-    float discounted_price = calculate_discounted_price(price, discount_percentage);
+    float price = 50;
+    float tax_rate = 0.1;
+    float tax_amount = calculate_tax_amount(price, tax_rate);
 
-    printf("Discounted Price: %.2f", discounted_price);
+    printf("Tax Amount: %.2f", tax_amount);
 
     return 0;
 }
