@@ -1,20 +1,20 @@
 #include <stdio.h>
 
-//NO 4
+// NO 6
 
-
-void  calculateroi(float investment, float profit, float *roi) {
-    *roi = (profit / investment) * 100;
+void calculatesimpleinterest(float principal, float annualinterestrate, int years, float *simpleinterest) {
+    *simpleinterest = (principal * annualinterestrate * years) / 100;
 }
 
 int main() {
-    float investment = 10000000;
-    float profit = 12000000;
-    float roi;
+    float principal = 2000000;
+    float annualinterestrate = 6;
+    int years = 3;
+    float simpleinterest;
 
-    calculateroi(investment, profit, &roi);
+    calculatesimpleinterest(principal, annualinterestrate, years, &simpleinterest);
 
-    printf("Return on Investment (ROI): %.2f percent", roi);
+    printf("Simple Interest: UGX %.2f\n", simpleinterest);
 
     return 0;
 }
