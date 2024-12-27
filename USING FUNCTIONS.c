@@ -1,19 +1,23 @@
 #include <stdio.h>
 
-// NO 13
+// NO 14
 
-float calculatetotalsalary (float basesalary, float bonus){
-return basesalary + (basesalary * bonus);
-}
- int main() {
+ float calculateprofit (float sellingprice, float buyingprice){
+ return sellingprice - buyingprice;
+ }
 
-     float basesalary = 100000;
-     float bonus = 0.08;
-     float totalsalary = calculatetotalsalary (basesalary, bonus);
+ int main(){
 
-     printf("Total salary;UGX %0.2f",totalsalary);
+  float sellingprice = 100000;
+  float buyingprice = 80000;
+  float profit = calculateprofit (sellingprice, buyingprice);
 
+ if (profit>0) {
+    printf("profit");
+ }
 
-
+ else if (profit<0) {
+    printf("loss");
+ }
     return 0;
 }
