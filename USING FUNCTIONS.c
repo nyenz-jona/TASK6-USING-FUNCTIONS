@@ -1,16 +1,28 @@
 #include <stdio.h>
 
-// NO 19
-float calculatetotaloverduefee (int days, float dailyoverdue){
-return dailyoverdue * days;
+// NO 20
+
+float calculatemaximumdiscount(float discount,float originalprice){
+
+if (discount <= 0.5) {
+    return originalprice * discount;
+}
+if (discount > 0.5){
+return originalprice * 0.5;
+}
 }
 
 int main(){
-int days = 6;
-float dailyoverdue = 100;
 
-float totaloverdue = calculatetotaloverduefee(days, dailyoverdue);
+float discout = 0.8;
+float originalprice = 100000;
 
-printf ("Total daily over due fees; %0.2f",totaloverdue);
+float maxdiscount = calculatemaximumdiscount (discout, originalprice);
+
+
+printf("Max Discount is; %0.2f",maxdiscount );
+
+
+
     return 0;
 }
