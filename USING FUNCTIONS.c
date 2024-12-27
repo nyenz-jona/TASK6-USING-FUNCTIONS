@@ -1,18 +1,21 @@
 #include <stdio.h>
 
-// NO 16
+// NO 17
 
- int calculateyears(float initialinvestment, float rate) {
-    return (int)ceil(log(2) / log(1 + (rate)));
+float calculatetotalexpenses(int numitems, float *prices) {
+    float totalexpenses = 0;
+    for (int i = 0; i < numitems; i++) {
+        totalexpenses += prices[i];
+    }
+    return totalexpenses;
 }
 
 int main() {
-    float initialinvestment = 1000;
-    float rate = 0.07;
-    int years= calculateyears(initialinvestment, rate);
+    int numitems = 4;
+    float prices[] = {100, 50, 150, 500};
+    float totalexpenses = calculatetotalexpenses(numitems, prices);
 
-    printf("Years to Double: %d years\n", years);
+    printf("Total Expenses: %.2f\n", totalexpenses);
 
     return 0;
-
 }
