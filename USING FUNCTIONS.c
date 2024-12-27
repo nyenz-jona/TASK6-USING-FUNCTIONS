@@ -1,20 +1,20 @@
 #include <stdio.h>
 
-//NO 3
+//NO 4
 
 
-void calculategrossprofit(double salesrevenue, double cogs, double grossprofit) {
-    grossprofit = salesrevenue - cogs;
+void  calculateroi(float investment, float profit, float *roi) {
+    *roi = (profit / investment) * 100;
 }
 
 int main() {
-    double salesrevenue = 15000000;
-    double cogs = 9000000;
-    double grossprofit;
+    float investment = 10000000;
+    float profit = 12000000;
+    float roi;
 
-    calculategrossprofit(salesrevenue, cogs, grossprofit);
+    calculateroi(investment, profit, &roi);
 
-    printf("Gross Profit: UGX %.2lf", grossprofit);
+    printf("Return on Investment (ROI): %.2f percent", roi);
 
     return 0;
 }
