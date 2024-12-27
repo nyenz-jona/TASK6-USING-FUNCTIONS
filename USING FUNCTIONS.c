@@ -1,20 +1,21 @@
 #include <stdio.h>
 
-// NO 6
+// NO 7
+#include <stdio.h>
 
-void calculatesimpleinterest(float principal, float annualinterestrate, int years, float *simpleinterest) {
-    *simpleinterest = (principal * annualinterestrate * years) / 100;
+void calculatebreakevenpoint(double fixedcosts, double variablecostsperunit, double sellingpriceperunit, double *breakevenpoint) {
+    *breakevenpoint = fixedcosts / (sellingpriceperunit - variablecostsperunit);
 }
 
 int main() {
-    float principal = 2000000;
-    float annualinterestrate = 6;
-    int years = 3;
-    float simpleinterest;
+    double fixedcosts = 10000000;
+    double variablecostsperunit = 50000;
+    double sellingpriceperunit = 100000;
+    double breakevenpoint;
 
-    calculatesimpleinterest(principal, annualinterestrate, years, &simpleinterest);
+    calculatebreakevenpoint(fixedcosts, variablecostsperunit, sellingpriceperunit, &breakevenpoint);
 
-    printf("Simple Interest: UGX %.2f\n", simpleinterest);
+    printf("Break-even Point: %.2f units\n", breakevenpoint);
 
     return 0;
 }
