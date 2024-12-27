@@ -1,23 +1,20 @@
 #include <stdio.h>
 
-// NO 14
+// NO 15
 
- float calculateprofit (float sellingprice, float buyingprice){
- return sellingprice - buyingprice;
+ float calculatediscountprice (float originalprice, float discount){
+ return originalprice - (originalprice * discount );
  }
 
  int main(){
 
-  float sellingprice = 100000;
-  float buyingprice = 80000;
-  float profit = calculateprofit (sellingprice, buyingprice);
+  float originalprice = 100000;
+  float discount = 0.08;
+  float discountprice = calculatediscountprice (originalprice, discount);
 
- if (profit>0) {
-    printf("profit");
- }
+ if (discount>0.2) {
+    printf("Discount price; %.2f",discountprice);
 
- else if (profit<0) {
-    printf("loss");
  }
     return 0;
 }
