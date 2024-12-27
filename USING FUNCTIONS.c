@@ -1,21 +1,18 @@
 #include <stdio.h>
 
-// NO 10
+// NO 11
 
-
-void calculate_straight_line_depreciation(float cost, float residual_value, int useful_life, float *annual_depreciation) {
-    *annual_depreciation = (cost - residual_value) / useful_life;
+float calculate_discounted_price(float price, float discount_percentage) {
+    float discount_amount = price * discount_percentage;
+    return price - discount_amount;
 }
 
 int main() {
-    float cost = 10000000;
-    float residual_value = 2000000;
-    int useful_life = 5;
-    float annual_depreciation;
+    float price = 100;
+    float discount_percentage = 0.1;
+    float discounted_price = calculate_discounted_price(price, discount_percentage);
 
-    calculate_straight_line_depreciation(cost, residual_value, useful_life, &annual_depreciation);
-
-    printf("Annual Depreciation: UGX %.2f", annual_depreciation);
+    printf("Discounted Price: %.2f", discounted_price);
 
     return 0;
 }
