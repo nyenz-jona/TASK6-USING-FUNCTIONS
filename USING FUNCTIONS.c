@@ -1,19 +1,21 @@
 #include <stdio.h>
 
-// NO 9
+// NO 10
 
-void calculate_profit_margin(float sales_revenue, float profit, float *profit_margin) {
-    *profit_margin = (profit / sales_revenue) * 100;
+
+void calculate_straight_line_depreciation(float cost, float residual_value, int useful_life, float *annual_depreciation) {
+    *annual_depreciation = (cost - residual_value) / useful_life;
 }
 
 int main() {
-    float sales_revenue = 30000000;
-    float profit = 9000000;
-    float profit_margin;
+    float cost = 10000000;
+    float residual_value = 2000000;
+    int useful_life = 5;
+    float annual_depreciation;
 
-    calculate_profit_margin(sales_revenue, profit, &profit_margin);
+    calculate_straight_line_depreciation(cost, residual_value, useful_life, &annual_depreciation);
 
-    printf("Profit Margin: %.2f percent", profit_margin);
+    printf("Annual Depreciation: UGX %.2f", annual_depreciation);
 
     return 0;
 }
